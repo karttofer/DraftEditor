@@ -1,7 +1,7 @@
 {
-  "name": "drafteditor",
+  "name": "drafty-editor",
   "version": "1.0.0",
-  "description": "",
+  "description": "Text editor",
   "main": "index.js",
   "dependencies": {
     "parcel-bundler": "^1.12.3",
@@ -17,6 +17,6 @@
     "start": "parcel ./public/index.html",
     "prettier" : "prettier --print-width 80 --no-semi --single-quote --trailing-comma es5 --write src/**/*.js"
   },
-  "author": "Jhornan Toyo",
+  "author": "Jhornan Toyo <jhornancolina@gmail.com>",
   "license": "MIT"
 }

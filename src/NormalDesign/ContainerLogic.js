@@ -29,6 +29,7 @@ export default class ContainerLogic extends React.PureComponent {
   render() {
     return (
       <>
+        <p contentEditable>Hello world</p>
         <ContainerPresentation
           appear={this.state.appear}
           x={
@@ -36,7 +37,7 @@ export default class ContainerLogic extends React.PureComponent {
               ? this.state.x / 2 + this.state.x / 3
               : this.state.x
           }
-          y={this.state.y - 30}
+          y={this.state.y - 10}
         />
       </>
     )

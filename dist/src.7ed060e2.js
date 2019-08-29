@@ -30955,20 +30955,20 @@ function (_React$Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "leftAlign", function () {
-      document.execCommand("justifyLeft", false, null);
+      document.execCommand('justifyLeft', false, null);
     });
 
     _defineProperty(_assertThisInitialized(_this), "rightAlign", function () {
-      document.execCommand("justifyRight", false, null);
+      document.execCommand('justifyRight', false, null);
     });
 
     _defineProperty(_assertThisInitialized(_this), "centerAlign", function () {
-      document.execCommand("justifyCenter", false, null);
+      document.execCommand('justifyCenter', false, null);
     });
 
     _defineProperty(_assertThisInitialized(_this), "createLink", function (e) {
       if (e.key == 'Enter' && _this.state.link) {
-        var element = document.createElement("a");
+        var element = document.createElement('a');
         element.href = _this.state.link;
 
         _this.state.select.surroundContents(element);
@@ -30976,7 +30976,7 @@ function (_React$Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "removeFormat", function () {
-      document.execCommand("removeFormat", false, null);
+      document.execCommand('removeFormat', false, null);
     });
 
     _defineProperty(_assertThisInitialized(_this), "getLink", function (e) {
@@ -31303,15 +31303,15 @@ function (_React$PureComponent) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "underline", function () {
-      document.execCommand("underline", false, "");
+      document.execCommand('underline', false, '');
     });
 
     _defineProperty(_assertThisInitialized(_this), "strikeThrough", function () {
-      document.execCommand("strikeThrough", false, "");
+      document.execCommand('strikeThrough', false, '');
     });
 
     _defineProperty(_assertThisInitialized(_this), "unlink", function (e) {
-      document.execCommand("unlink");
+      document.execCommand('unlink');
     });
 
     return _this;
@@ -31448,27 +31448,27 @@ function (_React$PureComponent) {
     _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(SizeLogic)).call.apply(_getPrototypeOf2, [this].concat(args)));
 
     _defineProperty(_assertThisInitialized(_this), "one", function () {
-      document.execCommand("fontSize", false, '1');
+      document.execCommand('fontSize', false, '1');
     });
 
     _defineProperty(_assertThisInitialized(_this), "two", function () {
-      document.execCommand("fontSize", false, 2);
+      document.execCommand('fontSize', false, 2);
     });
 
     _defineProperty(_assertThisInitialized(_this), "three", function () {
-      document.execCommand("fontSize", false, 3);
+      document.execCommand('fontSize', false, 3);
     });
 
     _defineProperty(_assertThisInitialized(_this), "four", function () {
-      document.execCommand("fontSize", false, 4);
+      document.execCommand('fontSize', false, 4);
     });
 
     _defineProperty(_assertThisInitialized(_this), "five", function () {
-      document.execCommand("fontSize", false, 5);
+      document.execCommand('fontSize', false, 5);
     });
 
     _defineProperty(_assertThisInitialized(_this), "nine", function () {
-      document.execCommand("fontSize", false, 9);
+      document.execCommand('fontSize', false, 9);
     });
 
     return _this;
@@ -31534,9 +31534,17 @@ var Colors = function Colors(_ref) {
 
   var backFont = function backFont(e) {
     setBackColor(e.target.attributes.color.value);
-    document.execCommand("BackColor", false, e.target.attributes.color.value);
+    document.execCommand('BackColor', false, e.target.attributes.color.value);
   };
 
+  var colorProps = [{
+    colors: ["#000000", "#FFFFFC", "#D7CF07", "#FF7F11", "#FF1B1C", "#4CB944", "#1C1D1A", "#FB0D72", "#E8A87C", "#41B3A3", "#2E1C2B"],
+    classname: "box-color default"
+  }];
+  var backProps = [{
+    colors: ["#F7F17E", "#590925", "#AAD2BA", "#D9FFF5", "#FFC700", "#53B6F4", "#32936F", "#0700B3", "#C44900", "#E5C697", "#FF6464"],
+    classname: "box-color default"
+  }];
   return _react.default.createElement("div", {
     className: "colback-container size"
   }, _react.default.createElement("div", {
@@ -31546,146 +31554,30 @@ var Colors = function Colors(_ref) {
     style: {
       backgroundColor: fontColor
     }
-  }, _react.default.createElement("div", null)), _react.default.createElement("button", {
-    className: "box-color default color-one",
-    color: "#000000",
-    onClick: function onClick(e) {
-      return colorFont(e);
-    }
-  }, _react.default.createElement("div", null)), _react.default.createElement("button", {
-    className: "box-color default color-two",
-    color: "#FFFFFC",
-    onClick: function onClick(e) {
-      return colorFont(e);
-    }
-  }, _react.default.createElement("div", null)), _react.default.createElement("button", {
-    className: "box-color default color-three",
-    color: "#D7CF07",
-    onClick: function onClick(e) {
-      return colorFont(e);
-    }
-  }, _react.default.createElement("div", null)), _react.default.createElement("button", {
-    className: "box-color default color-four",
-    color: "#FF7F11",
-    onClick: function onClick(e) {
-      return colorFont(e);
-    }
-  }, _react.default.createElement("div", null)), _react.default.createElement("button", {
-    className: "box-color default color-five",
-    color: "#FF1B1C",
-    onClick: function onClick(e) {
-      return colorFont(e);
-    }
-  }, _react.default.createElement("div", null)), _react.default.createElement("button", {
-    className: "box-color default color-six",
-    color: "#4CB944",
-    onClick: function onClick(e) {
-      return colorFont(e);
-    }
-  }, _react.default.createElement("div", null)), _react.default.createElement("button", {
-    className: "box-color default color-seven",
-    color: "#1C1D1A",
-    onClick: function onClick(e) {
-      return colorFont(e);
-    }
-  }, _react.default.createElement("div", null)), _react.default.createElement("button", {
-    className: "box-color default color-eight",
-    color: "#FB0D72",
-    onClick: function onClick(e) {
-      return colorFont(e);
-    }
-  }, _react.default.createElement("div", null)), _react.default.createElement("button", {
-    className: "box-color default color-nine",
-    color: "#E8A87C",
-    onClick: function onClick(e) {
-      return colorFont(e);
-    }
-  }, _react.default.createElement("div", null)), _react.default.createElement("button", {
-    className: "box-color default color-ten",
-    color: "#41B3A3",
-    onClick: function onClick(e) {
-      return colorFont(e);
-    }
-  }, _react.default.createElement("div", null)), _react.default.createElement("button", {
-    className: "box-color default color-eleven",
-    color: "#2E1C2B",
-    onClick: function onClick(e) {
-      return colorFont(e);
-    }
-  }, _react.default.createElement("div", null))), _react.default.createElement("div", {
+  }, _react.default.createElement("div", null)), colorProps[0].colors.map(function (v, i) {
+    return _react.default.createElement("button", {
+      color: v,
+      className: "".concat(colorProps[0].classname, " color-").concat(i + 1),
+      onClick: function onClick(e) {
+        return colorFont(e);
+      }
+    }, _react.default.createElement("div", null));
+  })), _react.default.createElement("div", {
     className: "colors-container"
   }, _react.default.createElement("button", {
     className: "actual-color",
     style: {
       backgroundColor: backColor
     }
-  }, _react.default.createElement("div", null)), _react.default.createElement("button", {
-    className: "box-color default color-thirteen",
-    color: "#F7F17E",
-    onClick: function onClick(e) {
-      return backFont(e);
-    }
-  }, _react.default.createElement("div", null)), _react.default.createElement("button", {
-    className: "box-color default color-fourteen",
-    color: "#590925",
-    onClick: function onClick(e) {
-      return backFont(e);
-    }
-  }, _react.default.createElement("div", null)), _react.default.createElement("button", {
-    className: "box-color default color-fifteen",
-    color: "#AAD2BA",
-    onClick: function onClick(e) {
-      return backFont(e);
-    }
-  }, _react.default.createElement("div", null)), _react.default.createElement("button", {
-    className: "box-color default color-sixteen",
-    color: "#D9FFF5",
-    onClick: function onClick(e) {
-      return backFont(e);
-    }
-  }, _react.default.createElement("div", null)), _react.default.createElement("button", {
-    className: "box-color default color-seventeen",
-    color: "#FFC700",
-    onClick: function onClick(e) {
-      return backFont(e);
-    }
-  }, _react.default.createElement("div", null)), _react.default.createElement("button", {
-    className: "box-color default color-eighteen",
-    color: "#53B6F4",
-    onClick: function onClick(e) {
-      return backFont(e);
-    }
-  }, _react.default.createElement("div", null)), _react.default.createElement("button", {
-    className: "box-color default color-eighteen",
-    color: "#32936F",
-    onClick: function onClick(e) {
-      return backFont(e);
-    }
-  }, _react.default.createElement("div", null)), _react.default.createElement("button", {
-    className: "box-color default color-twenty",
-    color: "#0700B3",
-    onClick: function onClick(e) {
-      return backFont(e);
-    }
-  }, _react.default.createElement("div", null)), _react.default.createElement("button", {
-    className: "box-color default color-twenty-one",
-    color: "#C44900",
-    onClick: function onClick(e) {
-      return backFont(e);
-    }
-  }, _react.default.createElement("div", null)), _react.default.createElement("button", {
-    className: "box-color default color-twenty-two",
-    color: "#E5C697",
-    onClick: function onClick(e) {
-      return backFont(e);
-    }
-  }, _react.default.createElement("div", null)), _react.default.createElement("button", {
-    className: "box-color default color-twenty-three",
-    color: "#FF6464",
-    onClick: function onClick(e) {
-      return backFont(e);
-    }
-  }, _react.default.createElement("div", null))));
+  }, _react.default.createElement("div", null)), backProps[0].colors.map(function (v, i) {
+    return _react.default.createElement("button", {
+      color: v,
+      className: "".concat(backProps[0].classname, " color-").concat(i + 11),
+      onClick: function onClick(e) {
+        return backFont(e);
+      }
+    }, _react.default.createElement("div", null));
+  })));
 };
 
 var _default = Colors;
@@ -31903,10 +31795,12 @@ function (_React$PureComponent) {
   _createClass(ContainerLogic, [{
     key: "render",
     value: function render() {
-      return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_ContainerPresentation.default, {
+      return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("p", {
+        contentEditable: true
+      }, "Hello world"), _react.default.createElement(_ContainerPresentation.default, {
         appear: this.state.appear,
         x: this.state.x > Math.floor(window.innerWidth / 2) ? this.state.x / 2 + this.state.x / 3 : this.state.x,
-        y: this.state.y - 30
+        y: this.state.y - 10
       }));
     }
   }]);
@@ -31962,7 +31856,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55608" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63500" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -1,0 +1,22 @@
+{
+  "name": "drafteditor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "parcel-bundler": "^1.12.3",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel ./public/index.html",
+    "prettier" : "prettier --print-width 80 --no-semi --single-quote --trailing-comma es5 --write src/**/*.js"
+  },
+  "author": "Jhornan Toyo",
+  "license": "MIT"
+}

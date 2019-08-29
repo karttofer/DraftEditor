@@ -1,0 +1,36 @@
+import React from 'react'
+import SecondLinePresentation from './SecondLineEditor'
+import './style.css'
+export default class SecondLineLogic extends React.PureComponent {
+  state = {
+    size: '',
+  }
+  bold = () => {
+    document.execCommand('bold')
+  }
+  italic = () => {
+    document.execCommand('italic')
+  }
+  underline = () => {
+    document.execCommand('underline', false, '')
+  }
+  strikeThrough = () => {
+    document.execCommand('strikeThrough', false, '')
+  }
+  unlink = e => {
+    document.execCommand('unlink')
+  }
+  render() {
+    return (
+      <>
+        <SecondLinePresentation
+          bold={this.bold}
+          italic={this.italic}
+          underline={this.underline}
+          strikeThrough={this.strikeThrough}
+          unlink={this.unlink}
+        />
+      </>
+    )
+  }
+}

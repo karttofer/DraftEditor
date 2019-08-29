@@ -1,0 +1,20 @@
+.third-line-items{
+	width: 147px;
+	height: 30px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center ;
+	padding-right: 5px;
+}
+.third-line-items > p{
+	
+	cursor: default;
+	font-size: .8em;
+    transform: translateX(6px);
+}
+.third-line-items > button{
+	border: none;
+	background: none;	
+	cursor: pointer;
+	outline: none;
+}

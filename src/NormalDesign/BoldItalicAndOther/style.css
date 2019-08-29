@@ -1,0 +1,32 @@
+
+.second-line-items{
+	
+	display: flex;
+	justify-content: space-around;
+	align-items: center ;
+}
+.second-line-items > button{
+	background: none;
+	border: none;
+	outline: none;
+	cursor: pointer;	
+}
+/* ICONS */
+.italic-svg {
+    width: 64%;
+}
+.underline-icon{
+	 width: 64%;
+}
+.strike-svg{
+	 width: 64%;
+}
+.bold-svg{
+	width: 107%;
+}
+.size-svg{
+	width: 107%;
+}
+.unlink-svg{
+	width: 64%;
+}

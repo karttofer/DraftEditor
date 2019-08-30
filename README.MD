@@ -46,6 +46,7 @@ I had problems with this and the only solution right now is:
 		  When you finish of write the link presst 'Enter'.
 	</li>
 </ul>
+</ul>
 
 # Tools
 `react`: What?, you don't know what react is?... Go to its website -> <a href='https://reactjs.org/' target='_blank'>react is amazing!</a></br>

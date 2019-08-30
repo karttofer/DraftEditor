@@ -16,10 +16,6 @@ html,body{
 .container{
 	z-index: 1;
 	position: absolute;
-<<<<<<< HEAD
-	z-index: 1;
-=======
->>>>>>> cretead: drafty website
 	width: 206px;
     justify-content: center;
     align-items: center;

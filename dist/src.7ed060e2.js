@@ -31869,18 +31869,8 @@ function (_React$PureComponent) {
     value: function render() {
       return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_ContainerPresentation.default, {
         appear: this.state.appear,
-<<<<<<< HEAD
-<<<<<<< HEAD
         x: this.state.x > window.innerWidth / 2 ? this.state.x - 230 : this.state.x + 10,
         y: this.state.y > window.innerHeight / 2 ? this.state.y - 210 : this.state.y + 10
-=======
-        x: this.state.x > Math.floor(window.innerWidth / 2) ? this.state.x - 560 : this.state.x - 560,
-        y: this.state.y - 220
->>>>>>> cretead: drafty website
-=======
-        x: this.state.x >= Math.floor(window.innerWidth / 2) ? this.state.x - 560 : this.state.x - 560,
-        y: this.state.y >= 400 ? this.state.y - 450 : this.state.y - 220
->>>>>>> FixBug: Text editor makes the page grow
       }));
     }
   }]);
@@ -31967,15 +31957,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-<<<<<<< HEAD
-<<<<<<< HEAD
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50003" + '/');
-=======
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56689" + '/');
->>>>>>> cretead: drafty website
-=======
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51426" + '/');
->>>>>>> FixBug: Text editor makes the page grow
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51922" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

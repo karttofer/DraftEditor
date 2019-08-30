@@ -18,18 +18,18 @@ Yeah, you can!.
 ## How can I create a link?
 I had problems with this and the only solution right now is:
 <ul>
-	<il>
-		 1. Select your text/
-	</il>
-	<il>
-		 2. Place the mouse inside of link icon (should appear a input inside of the icon).
-	</il>
-	<il>
-		 3. Write the link.
-	</il>
-	<il>
-		 4.When you finish of write the link presst 'Enter'.
-	</il>
+	<li>
+		  Select your text
+	</li>
+	<li>
+		  Place the mouse inside of link icon (should appear a input inside of the icon).
+	</li>
+	<li>
+		  Write the link.
+	</li>
+	<li>
+		  When you finish of write the link presst 'Enter'.
+	</li>
 </ul>
 
 # Tools

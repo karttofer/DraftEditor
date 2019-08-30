@@ -353,6 +353,7 @@ html,body{
 	height: 100%;
 }
 .container{
+	z-index: 1;
 	position: absolute;
 <<<<<<< HEAD
 	z-index: 1;

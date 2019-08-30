@@ -1,5 +1,10 @@
 #Quite node modules
 /node_modules
 /.cache
+<<<<<<< HEAD
 /dists
 /netlify
+=======
+/dist
+/.netlify
+>>>>>>> FixBug: Text editor makes the page grow

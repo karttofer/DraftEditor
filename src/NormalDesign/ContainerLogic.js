@@ -12,6 +12,7 @@ export default class ContainerLogic extends React.PureComponent {
         this.setState({
           appear: !this.state.appear,
         })
+        console.log(this.state.x,this.state.y)
       }
     }, 100)
     document.body.addEventListener('mousemove', e => {
@@ -33,6 +34,7 @@ export default class ContainerLogic extends React.PureComponent {
           appear={this.state.appear}
           x={
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.state.x > window.innerWidth/2 ? this.state.x - 230 : this.state.x + 10
           }
           y={
@@ -45,6 +47,15 @@ export default class ContainerLogic extends React.PureComponent {
           }
           y={this.state.y - 220}
 >>>>>>> cretead: drafty website
+=======
+            this.state.x >= Math.floor(window.innerWidth / 2) ? this.state.x - 560
+              : this.state.x - 560
+          }
+          y={
+             this.state.y >= 400 ? this.state.y - 450
+             : this.state.y - 220 
+           }
+>>>>>>> FixBug: Text editor makes the page grow
         />
       </>
     )

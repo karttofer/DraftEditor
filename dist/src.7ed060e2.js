@@ -30609,7 +30609,143 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./cjs/react-dom.development.js');
 }
-},{"./cjs/react-dom.development.js":"../node_modules/react-dom/cjs/react-dom.development.js"}],"../src/NormalDesign/icons/LeftICon.js":[function(require,module,exports) {
+},{"./cjs/react-dom.development.js":"../node_modules/react-dom/cjs/react-dom.development.js"}],"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+var bundleURL = null;
+
+function getBundleURLCached() {
+  if (!bundleURL) {
+    bundleURL = getBundleURL();
+  }
+
+  return bundleURL;
+}
+
+function getBundleURL() {
+  // Attempt to find the URL of the current script and use that as the base URL
+  try {
+    throw new Error();
+  } catch (err) {
+    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
+
+    if (matches) {
+      return getBaseURL(matches[0]);
+    }
+  }
+
+  return '/';
+}
+
+function getBaseURL(url) {
+  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
+}
+
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+},{}],"../node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+var bundle = require('./bundle-url');
+
+function updateLink(link) {
+  var newLink = link.cloneNode();
+
+  newLink.onload = function () {
+    link.remove();
+  };
+
+  newLink.href = link.href.split('?')[0] + '?' + Date.now();
+  link.parentNode.insertBefore(newLink, link.nextSibling);
+}
+
+var cssTimeout = null;
+
+function reloadCSS() {
+  if (cssTimeout) {
+    return;
+  }
+
+  cssTimeout = setTimeout(function () {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+
+    for (var i = 0; i < links.length; i++) {
+      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
+        updateLink(links[i]);
+      }
+    }
+
+    cssTimeout = null;
+  }, 50);
+}
+
+module.exports = reloadCSS;
+},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../src/Page/style.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../src/Page/WelcomeComponent.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+require("./style.css");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var WelcomeComponent = function WelcomeComponent() {
+  return _react.default.createElement("div", {
+    className: "page-container"
+  }, _react.default.createElement("h1", {
+    contentEditable: true,
+    suppressContentEditableWarning: true
+  }, "This page was created ", _react.default.createElement("span", {
+    className: "for-you"
+  }, "for you"), ", if you want you can try changing this text...Yeah, you can change it \uD83D\uDE40. This project was create just to show you that ", _react.default.createElement("span", {
+    className: "react-isAmazing"
+  }, "React is amazing!"), ", so let's started \uD83E\uDD17..."), _react.default.createElement("div", {
+    className: "npm-container"
+  }, _react.default.createElement("p", null, "You can use npm:"), _react.default.createElement("p", {
+    className: "npm-text"
+  }, " npm i drafty-editor "), _react.default.createElement("p", null, "Ey, you can use dev too:"), _react.default.createElement("p", {
+    className: "npm-text-dev"
+  }, " npm i --save-dev drafty-editor")));
+};
+
+var _default = WelcomeComponent;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js","./style.css":"../src/Page/style.css"}],"../src/Page/IconGithub.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var GithubIcon = function GithubIcon() {
+  return _react.default.createElement("svg", {
+    className: "default github-svg",
+    version: "1.1",
+    id: "Capa_1",
+    x: "0px",
+    y: "0px",
+    width: "24px",
+    height: "24px",
+    viewBox: "0 0 438.549 438.549"
+  }, _react.default.createElement("g", null, _react.default.createElement("path", {
+    d: "M409.132,114.573c-19.608-33.596-46.205-60.194-79.798-79.8C295.736,15.166,259.057,5.365,219.271,5.365\r c-39.781,0-76.472,9.804-110.063,29.408c-33.596,19.605-60.192,46.204-79.8,79.8C9.803,148.168,0,184.854,0,224.63\r c0,47.78,13.94,90.745,41.827,128.906c27.884,38.164,63.906,64.572,108.063,79.227c5.14,0.954,8.945,0.283,11.419-1.996\r c2.475-2.282,3.711-5.14,3.711-8.562c0-0.571-0.049-5.708-0.144-15.417c-0.098-9.709-0.144-18.179-0.144-25.406l-6.567,1.136\r c-4.187,0.767-9.469,1.092-15.846,1c-6.374-0.089-12.991-0.757-19.842-1.999c-6.854-1.231-13.229-4.086-19.13-8.559\r c-5.898-4.473-10.085-10.328-12.56-17.556l-2.855-6.57c-1.903-4.374-4.899-9.233-8.992-14.559\r c-4.093-5.331-8.232-8.945-12.419-10.848l-1.999-1.431c-1.332-0.951-2.568-2.098-3.711-3.429c-1.142-1.331-1.997-2.663-2.568-3.997\r c-0.572-1.335-0.098-2.43,1.427-3.289c1.525-0.859,4.281-1.276,8.28-1.276l5.708,0.853c3.807,0.763,8.516,3.042,14.133,6.851\r c5.614,3.806,10.229,8.754,13.846,14.842c4.38,7.806,9.657,13.754,15.846,17.847c6.184,4.093,12.419,6.136,18.699,6.136\r c6.28,0,11.704-0.476,16.274-1.423c4.565-0.952,8.848-2.383,12.847-4.285c1.713-12.758,6.377-22.559,13.988-29.41\r c-10.848-1.14-20.601-2.857-29.264-5.14c-8.658-2.286-17.605-5.996-26.835-11.14c-9.235-5.137-16.896-11.516-22.985-19.126\r c-6.09-7.614-11.088-17.61-14.987-29.979c-3.901-12.374-5.852-26.648-5.852-42.826c0-23.035,7.52-42.637,22.557-58.817\r c-7.044-17.318-6.379-36.732,1.997-58.24c5.52-1.715,13.706-0.428,24.554,3.853c10.85,4.283,18.794,7.952,23.84,10.994\r c5.046,3.041,9.089,5.618,12.135,7.708c17.705-4.947,35.976-7.421,54.818-7.421s37.117,2.474,54.823,7.421l10.849-6.849\r c7.419-4.57,16.18-8.758,26.262-12.565c10.088-3.805,17.802-4.853,23.134-3.138c8.562,21.509,9.325,40.922,2.279,58.24\r c15.036,16.18,22.559,35.787,22.559,58.817c0,16.178-1.958,30.497-5.853,42.966c-3.9,12.471-8.941,22.457-15.125,29.979\r c-6.191,7.521-13.901,13.85-23.131,18.986c-9.232,5.14-18.182,8.85-26.84,11.136c-8.662,2.286-18.415,4.004-29.263,5.146\r c9.894,8.562,14.842,22.077,14.842,40.539v60.237c0,3.422,1.19,6.279,3.572,8.562c2.379,2.279,6.136,2.95,11.276,1.995\r c44.163-14.653,80.185-41.062,108.068-79.226c27.88-38.161,41.825-81.126,41.825-128.906\r C438.536,184.851,428.728,148.168,409.132,114.573z"
+  })));
+};
+
+var _default = GithubIcon;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js"}],"../src/NormalDesign/icons/LeftICon.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -30808,74 +30944,7 @@ var AlignOptions = function AlignOptions(_ref) {
 
 var _default = AlignOptions;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","../icons/LeftICon":"../src/NormalDesign/icons/LeftICon.js","../icons/RightICon":"../src/NormalDesign/icons/RightICon.js","../icons/CenterIcon":"../src/NormalDesign/icons/CenterIcon.js","../icons/FormatCleanIcon":"../src/NormalDesign/icons/FormatCleanIcon.js","../icons/LinkIcon":"../src/NormalDesign/icons/LinkIcon.js"}],"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
-
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
-
-  return bundleURL;
-}
-
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
-
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
-
-  return '/';
-}
-
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
-}
-
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"../node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-
-function updateLink(link) {
-  var newLink = link.cloneNode();
-
-  newLink.onload = function () {
-    link.remove();
-  };
-
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-
-var cssTimeout = null;
-
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
-    }
-
-    cssTimeout = null;
-  }, 50);
-}
-
-module.exports = reloadCSS;
-},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../src/NormalDesign/TextAlignLinkNoValid/style.css":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","../icons/LeftICon":"../src/NormalDesign/icons/LeftICon.js","../icons/RightICon":"../src/NormalDesign/icons/RightICon.js","../icons/CenterIcon":"../src/NormalDesign/icons/CenterIcon.js","../icons/FormatCleanIcon":"../src/NormalDesign/icons/FormatCleanIcon.js","../icons/LinkIcon":"../src/NormalDesign/icons/LinkIcon.js"}],"../src/NormalDesign/TextAlignLinkNoValid/style.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -31798,8 +31867,13 @@ function (_React$PureComponent) {
     value: function render() {
       return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_ContainerPresentation.default, {
         appear: this.state.appear,
+<<<<<<< HEAD
         x: this.state.x > window.innerWidth / 2 ? this.state.x - 230 : this.state.x + 10,
         y: this.state.y > window.innerHeight / 2 ? this.state.y - 210 : this.state.y + 10
+=======
+        x: this.state.x > Math.floor(window.innerWidth / 2) ? this.state.x - 560 : this.state.x - 560,
+        y: this.state.y - 220
+>>>>>>> cretead: drafty website
       }));
     }
   }]);
@@ -31808,7 +31882,38 @@ function (_React$PureComponent) {
 }(_react.default.PureComponent);
 
 exports.default = ContainerLogic;
-},{"react":"../node_modules/react/index.js","./ContainerPresentation":"../src/NormalDesign/ContainerPresentation.js"}],"../src/index.css":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","./ContainerPresentation":"../src/NormalDesign/ContainerPresentation.js"}],"../src/Page/PageContainer.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _WelcomeComponent = _interopRequireDefault(require("./WelcomeComponent"));
+
+var _IconGithub = _interopRequireDefault(require("./IconGithub"));
+
+var _ContainerLogic = _interopRequireDefault(require("../NormalDesign/ContainerLogic"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Container = function Container() {
+  return _react.default.createElement("div", {
+    className: "father-container"
+  }, _react.default.createElement(_ContainerLogic.default, null), _react.default.createElement("div", {
+    className: "to-github"
+  }, _react.default.createElement("a", {
+    href: "https://github.com/karttofer/DraftEditor",
+    target: "_blank"
+  }, _react.default.createElement(_IconGithub.default, null))), _react.default.createElement(_WelcomeComponent.default, null));
+};
+
+var _default = Container;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js","./WelcomeComponent":"../src/Page/WelcomeComponent.js","./IconGithub":"../src/Page/IconGithub.js","../NormalDesign/ContainerLogic":"../src/NormalDesign/ContainerLogic.js"}],"../src/index.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -31820,14 +31925,14 @@ var _react = _interopRequireDefault(require("react"));
 
 var _reactDom = _interopRequireDefault(require("react-dom"));
 
-var _ContainerLogic = _interopRequireDefault(require("./NormalDesign/ContainerLogic"));
+var _PageContainer = _interopRequireDefault(require("./Page/PageContainer"));
 
 require("./index.css");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_reactDom.default.render(_react.default.createElement(_ContainerLogic.default, null), document.getElementById('root'));
-},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","./NormalDesign/ContainerLogic":"../src/NormalDesign/ContainerLogic.js","./index.css":"../src/index.css"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+_reactDom.default.render(_react.default.createElement(_PageContainer.default, null), document.getElementById('root'));
+},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","./Page/PageContainer":"../src/Page/PageContainer.js","./index.css":"../src/index.css"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -31855,7 +31960,11 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
+<<<<<<< HEAD
   var ws = new WebSocket(protocol + '://' + hostname + ':' + "50003" + '/');
+=======
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56689" + '/');
+>>>>>>> cretead: drafty website
 
   ws.onmessage = function (event) {
     checkedAssets = {};

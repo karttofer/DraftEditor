@@ -1,3 +1,84 @@
+.father-container{
+	width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.page-container{
+	width: 66%;
+	font-family: 'Work Sans', sans-serif;
+	outline: none;
+}
+.page-container > div{
+	 transform: translate(0px, 143px);
+}
+#root{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	box-shadow: inset 0 0px 6px rgba(0,0,0,.5);
+}
+/* NPM TEXT */
+.npm-container{
+	 opacity: 0.6;
+	 transition: all .5s;
+}
+.npm-container:hover{
+	opacity: 1;
+	transition: all .5s;
+}
+.npm-text{
+	width: 20%;
+    height: 22px;
+    color: #232121;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 200;
+    font-size: .9em;
+    border-radius: 4px;
+    transform: translateX(19%);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: #f3f0f0;
+}
+.npm-text-dev{
+	width: 29%;
+    height: 22px;
+    color: #232121;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 200;
+    font-size: .9em;
+    border-radius: 4px;
+    transform: translateX(13%);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: #f3f0f0;
+}
+/* Principal text style */
+.react-isAmazing{
+	color: darkorange;	
+}
+.for-you{
+	 color: #ff009f;
+}
+/* TO GITHUB BUTTON */
+.to-github{
+	width: 100%;
+    height: 49px;
+    position: absolute;
+    align-self: self-start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.github-svg{
+	cursor: pointer;
+}
 .first-line-items {
 	display: flex;
 	justify-content: space-around;
@@ -273,7 +354,10 @@ html,body{
 }
 .container{
 	position: absolute;
+<<<<<<< HEAD
 	z-index: 1;
+=======
+>>>>>>> cretead: drafty website
 	width: 206px;
     justify-content: center;
     align-items: center;

@@ -1,5 +1,6 @@
 #Quite node modules
 <<<<<<< HEAD
+<<<<<<< HEAD
 /node_modules
 /.cache
 <<<<<<< HEAD
@@ -15,3 +16,9 @@ node_modules/
 dist/
 .netlify/
 >>>>>>> Triying: Fixing merge troubles
+=======
+/node_modules
+/.cache
+/dist
+/.netlify
+>>>>>>> Fix: gitignore didn't works

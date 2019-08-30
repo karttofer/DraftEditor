@@ -29,7 +29,6 @@ export default class ContainerLogic extends React.PureComponent {
   render() {
     return (
       <>
-        <p contentEditable>Hello world</p>
         <ContainerPresentation
           appear={this.state.appear}
           x={

@@ -10,6 +10,22 @@ Okay... okay, preprocessor are so cool, and I know make easier the work, but I d
 
 ## Can I improve your code or take it how example? 😎
 Yeah, you can!.
+## How can I create a link?
+I had problems with this and the only solution right now is:
+<ul>
+	<li>
+		  Select your text
+	</li>
+	<li>
+		  Place the mouse inside of link icon (should appear a input inside of the icon).
+	</li>
+	<li>
+		  Write the link.
+	</li>
+	<li>
+		  When you finish of write the link presst 'Enter'.
+	</li>
+</ul>
 # Tools
 `react`: What?, you don't know what react is?... Go to its website -> <a href='https://reactjs.org/' target='_blank'>react is amazing!</a></br>
 `git`: Git allows you to keep control on your project (At this case I used it with Github) -> <a href='https://git-scm.com/' target='_blank'>

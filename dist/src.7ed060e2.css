@@ -272,6 +272,8 @@ html,body{
 	height: 100%;
 }
 .container{
+	position: absolute;
+	z-index: 1;
 	width: 206px;
     justify-content: center;
     align-items: center;

@@ -30955,20 +30955,20 @@ function (_React$Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "leftAlign", function () {
-      document.execCommand('justifyLeft', false, null);
+      document.execCommand("justifyLeft", false, null);
     });
 
     _defineProperty(_assertThisInitialized(_this), "rightAlign", function () {
-      document.execCommand('justifyRight', false, null);
+      document.execCommand("justifyRight", false, null);
     });
 
     _defineProperty(_assertThisInitialized(_this), "centerAlign", function () {
-      document.execCommand('justifyCenter', false, null);
+      document.execCommand("justifyCenter", false, null);
     });
 
     _defineProperty(_assertThisInitialized(_this), "createLink", function (e) {
       if (e.key == 'Enter' && _this.state.link) {
-        var element = document.createElement('a');
+        var element = document.createElement("a");
         element.href = _this.state.link;
 
         _this.state.select.surroundContents(element);
@@ -30976,7 +30976,7 @@ function (_React$Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "removeFormat", function () {
-      document.execCommand('removeFormat', false, null);
+      document.execCommand("removeFormat", false, null);
     });
 
     _defineProperty(_assertThisInitialized(_this), "getLink", function (e) {
@@ -31538,12 +31538,12 @@ var Colors = function Colors(_ref) {
   };
 
   var colorProps = [{
-    colors: ["#000000", "#FFFFFC", "#D7CF07", "#FF7F11", "#FF1B1C", "#4CB944", "#1C1D1A", "#FB0D72", "#E8A87C", "#41B3A3", "#2E1C2B"],
-    classname: "box-color default"
+    colors: ['#000000', '#FFFFFC', '#D7CF07', '#FF7F11', '#FF1B1C', '#4CB944', '#1C1D1A', '#FB0D72', '#E8A87C', '#41B3A3', '#2E1C2B'],
+    classname: 'box-color default'
   }];
   var backProps = [{
-    colors: ["#F7F17E", "#590925", "#AAD2BA", "#D9FFF5", "#FFC700", "#53B6F4", "#32936F", "#0700B3", "#C44900", "#E5C697", "#FF6464"],
-    classname: "box-color default"
+    colors: ['#F7F17E', '#590925', '#AAD2BA', '#D9FFF5', '#FFC700', '#53B6F4', '#32936F', '#0700B3', '#C44900', '#E5C697', '#FF6464'],
+    classname: 'box-color default'
   }];
   return _react.default.createElement("div", {
     className: "colback-container size"
@@ -31699,7 +31699,8 @@ var Container = function Container(_ref) {
     onMouseMove: move,
     style: {
       display: appear ? 'flex' : 'none',
-      transform: "translate(".concat(x, "px,").concat(y, "px)")
+      left: "".concat(x, "px"),
+      top: "".concat(y, "px")
     },
     id: "invalid"
   }, _react.default.createElement(_FirstLineLogic.default, null), _react.default.createElement(_SecondLineLogic.default, null), _react.default.createElement(_SizeLogic.default, null), _react.default.createElement(_ColorsContainer.default, null));
@@ -31795,12 +31796,10 @@ function (_React$PureComponent) {
   _createClass(ContainerLogic, [{
     key: "render",
     value: function render() {
-      return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("p", {
-        contentEditable: true
-      }, "Hello world"), _react.default.createElement(_ContainerPresentation.default, {
+      return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_ContainerPresentation.default, {
         appear: this.state.appear,
-        x: this.state.x > Math.floor(window.innerWidth / 2) ? this.state.x / 2 + this.state.x / 3 : this.state.x,
-        y: this.state.y - 10
+        x: this.state.x > window.innerWidth / 2 ? this.state.x - 230 : this.state.x + 10,
+        y: this.state.y > window.innerHeight / 2 ? this.state.y - 210 : this.state.y + 10
       }));
     }
   }]);
@@ -31856,7 +31855,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63500" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50003" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

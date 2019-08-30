@@ -12,7 +12,7 @@ export default class ContainerLogic extends React.PureComponent {
         this.setState({
           appear: !this.state.appear,
         })
-        console.log(this.state.x,this.state.y)
+        console.log(this.state.x, this.state.y)
       }
     }, 100)
     document.body.addEventListener('mousemove', e => {
@@ -30,15 +30,18 @@ export default class ContainerLogic extends React.PureComponent {
   render() {
     return (
       <>
-         <ContainerPresentation
+        <ContainerPresentation
           appear={this.state.appear}
           x={
-
-            this.state.x > window.innerWidth/2 ? this.state.x - 230 : this.state.x + 10
+            this.state.x > window.innerWidth / 2
+              ? this.state.x - 230
+              : this.state.x + 10
           }
           y={
-             this.state.y > window.innerHeight /2 ? this.state.y - 210 : this.state.y + 10
-           }
+            this.state.y > window.innerHeight / 2
+              ? this.state.y - 210
+              : this.state.y + 10
+          }
         />
       </>
     )

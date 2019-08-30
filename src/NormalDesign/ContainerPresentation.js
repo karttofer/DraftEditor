@@ -10,8 +10,8 @@ const Container = ({ appear, x, y, move }) => {
       onMouseMove={move}
       style={{
         display: appear ? 'flex' : 'none',
-        left : `${x}px`,
-        top : `${y}px`
+        left: `${x}px`,
+        top: `${y}px`,
       }}
       id="invalid"
     >

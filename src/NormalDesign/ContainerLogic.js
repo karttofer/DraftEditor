@@ -1,15 +1,15 @@
 import React from 'react'
 import ContainerPresentation from './ContainerPresentation'
 export default class ContainerLogic extends React.PureComponent {
-    constructor(props){
-      super(props);
-      this.state = {
-          appear: false,
-          x: 0,
-          y: 0,
-        }
+  constructor(props) {
+    super(props)
+    this.state = {
+      appear: false,
+      x: 0,
+      y: 0,
     }
-   componentDidMount(){ 
+  }
+  componentDidMount() {
     setInterval(() => {
       if (document.getSelection().toString() && this.state.appear == false) {
         this.setState({
@@ -31,15 +31,19 @@ export default class ContainerLogic extends React.PureComponent {
   }
   render() {
     return (
-          <ContainerPresentation
-          appear={this.state.appear}
-          x={
-            this.state.x > window.innerWidth/2 ? this.state.x - 230 : this.state.x + 10
-          }
-          y={
-             this.state.y > window.innerHeight /2 ? this.state.y - 210 : this.state.y + 10
-           }
-        />
+      <ContainerPresentation
+        appear={this.state.appear}
+        x={
+          this.state.x > window.innerWidth / 2
+            ? this.state.x - 230
+            : this.state.x + 10
+        }
+        y={
+          this.state.y > window.innerHeight / 2
+            ? this.state.y - 210
+            : this.state.y + 10
+        }
+      />
     )
   }
 }

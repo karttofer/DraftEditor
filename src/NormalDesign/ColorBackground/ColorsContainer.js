@@ -6,8 +6,8 @@ export default class ColorBackground extends React.PureComponent {
   render() {
     return (
       <div>
-      	<Titles />
-      	<ColorBackPresentation />
+        <Titles />
+        <ColorBackPresentation />
       </div>
     )
   }

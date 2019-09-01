@@ -1,14 +1,9 @@
-<<<<<<< HEAD
 # drafty-editor
 [![NPM](https://img.shields.io/npm/v/drafty-editor.svg)](https://www.npmjs.com/package/drafty-editor) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)</br>
 ![gif](https://user-images.githubusercontent.com/34972636/63978805-f06de480-ca7c-11e9-965a-40d5aaf49772.gif)</br>
 drafty-editor is a text editor that allows you to make amazing things with your text, it's very small and it react when you select to a text.
 ## Install
-![gif](https://user-images.githubusercontent.com/34972636/63978805-f06de480-ca7c-11e9-965a-40d5aaf49772.gif)
-# DraftEditor
-DraftEditor is a text editor that allows you to make amazing things with your text, it's very small and it react when you select to a text.
-# I need to know how installed
-You can use the normal npm:
+
 ```npm
    npm install --save-dev drafty-editor
 ```
@@ -61,4 +56,3 @@ Git</a></br>
 ## License
 
 MIT © [Jhornan Colina (karttofel)](https://github.com/karttofer)
-

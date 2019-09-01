@@ -1,17 +1,19 @@
 import React from 'react'
-import FirstLine from './TextAlignLinkNoValid/FirstLineLogic'
+import FirstLine from './TextAlignLinkRestoneAlign/FirstLineLogic'
 import SecondLine from './BoldItalicAndOther/SecondLineLogic'
 import ThirdLine from './Size/SizeLogic'
 import FourthLine from './ColorBackground/ColorsContainer'
-const Container = ({ appear, x, y, move }) => {
-  return (
-    <div
+
+export default class Container extends React.Component{
+  render(){
+     return(
+      <div
       className="container"
-      onMouseMove={move}
+      onMouseMove={this.props.move}
       style={{
-        display: appear ? 'flex' : 'none',
-        left : `${x}px`,
-        top : `${y}px`
+        display: this.props.appear ? 'flex' : 'none',
+        left : `${this.props.x}px`,
+        top : `${this.props.y}px`
       }}
       id="invalid"
     >
@@ -20,6 +22,6 @@ const Container = ({ appear, x, y, move }) => {
       <ThirdLine />
       <FourthLine />
     </div>
-  )
+    )
+  }
 }
-export default Container

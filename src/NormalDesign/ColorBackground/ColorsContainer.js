@@ -5,10 +5,9 @@ import './style.css'
 export default class ColorBackground extends React.PureComponent {
   render() {
     return (
-      <>
-        <Titles />
-        <ColorBackPresentation />
-      </>
+      <div>
+      	<Titles /><ColorBackPresentation />
+      </div>
     )
   }
 }

@@ -28,8 +28,7 @@ export default class ContainerLogic extends React.PureComponent {
   }
   render() {
     return (
-      <>
-         <ContainerPresentation
+          <ContainerPresentation
           appear={this.state.appear}
           x={
             this.state.x > window.innerWidth/2 ? this.state.x - 230 : this.state.x + 10
@@ -38,7 +37,6 @@ export default class ContainerLogic extends React.PureComponent {
              this.state.y > window.innerHeight /2 ? this.state.y - 210 : this.state.y + 10
            }
         />
-      </>
     )
   }
 }

@@ -4,31 +4,27 @@ import ItalicIcon from '../icons/ItalicIcon'
 import UnderLIcon from '../icons/UndelineIcon'
 import CenterStrike from '../icons/StrikeCenterIcon'
 import UnlinkIcon from '../icons/UnlinkIcon'
-const SecondLinePresentation = ({
-  bold,
-  italic,
-  underline,
-  strikeThrough,
-  unlink,
-}) => {
-  return (
+export default class SecondLinePresentation extends React.PureComponent{
+  render(){
+    return (
     <div className="second-line-items size" id="invalid">
-      <button onClick={bold} id="invalid">
+      <button onClick={this.props.bold} id="invalid">
         <BoldIcon />
       </button>
-      <button onClick={italic} id="invalid">
+      <button onClick={this.props.italic} id="invalid">
         <ItalicIcon />
       </button>
-      <button onClick={underline} id="invalid">
+      <button onClick={this.props.underline} id="invalid">
         <UnderLIcon />
       </button>
-      <button onClick={strikeThrough} id="invalid">
+      <button onClick={this.props.strikeThrough} id="invalid">
         <CenterStrike />
       </button>
-      <button className="show-size" onClick={unlink} id="invalid">
+      <button className="show-size" onClick={this.props.unlink} id="invalid">
         <UnlinkIcon />
       </button>
     </div>
-  )
+    )
+  }
 }
-export default SecondLinePresentation
+

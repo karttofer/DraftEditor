@@ -22,7 +22,6 @@ export default class SecondLineLogic extends React.PureComponent {
   }
   render() {
     return (
-      <>
         <SecondLinePresentation
           bold={this.bold}
           italic={this.italic}
@@ -30,7 +29,6 @@ export default class SecondLineLogic extends React.PureComponent {
           strikeThrough={this.strikeThrough}
           unlink={this.unlink}
         />
-      </>
     )
   }
 }

@@ -1,7 +1,27 @@
-![gif](https://user-images.githubusercontent.com/34972636/63978805-f06de480-ca7c-11e9-965a-40d5aaf49772.gif)
-# DraftEditor
-DraftEditor is a text editor that allows you to make amazing things with your text, it's very small and it react when you select to a text.
+# drafty-editor
+[![NPM](https://img.shields.io/npm/v/drafty-editor.svg)](https://www.npmjs.com/package/drafty-editor) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)</br>
+![gif](https://user-images.githubusercontent.com/34972636/63978805-f06de480-ca7c-11e9-965a-40d5aaf49772.gif)</br>
+drafty-editor is a text editor that allows you to make amazing things with your text, it's very small and it react when you select to a text.
+## Install
 
+```npm
+   npm install --save-dev drafty-editor
+```
+## Usage
+
+```jsx
+import React, { Component } from 'react'
+
+import Draft from 'drafty-editor'
+
+class App extends Component {
+  render () {
+    return (
+      <Draft />
+    )
+  }
+}
+```
 ## How was created 😗?
 Well, I'm react developer (I love it 💖) besides this projects it's just JSX and CSS.
 
@@ -33,3 +53,6 @@ I had problems with this and the only solution right now is:
 Git</a></br>
 `parcel`: Parcel makes your project quikly and you don't need write a lot of code like webpack -> <a href='https://parceljs.org/' target='_blank'>Parcel</a></br>
 `prettier`: Make your code beautiful with prettier<a href='https://prettier.io/' target='_blank'>Prettier</a>
+## License
+
+MIT © [Jhornan Colina (karttofel)](https://github.com/karttofer)

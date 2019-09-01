@@ -1,16 +1,5 @@
-import React, { useState } from 'react'
-const Colors = ({}) => {
-  const [fontColor, setFontColor] = useState('#000000')
-  const [backColor, setBackColor] = useState('#000000')
-  const colorFont = e => {
-    setFontColor(e.target.attributes.color.value)
-    document.execCommand('foreColor', false, e.target.attributes.color.value)
-  }
-  const backFont = e => {
-    setBackColor(e.target.attributes.color.value)
-    document.execCommand('BackColor', false, e.target.attributes.color.value)
-  }
-  const colorProps = [
+import React from 'react'
+const colorProps = [
     {
       colors: [
         '#000000',
@@ -46,31 +35,55 @@ const Colors = ({}) => {
       classname: 'box-color default',
     },
   ]
-  return (
+export default class Colors extends React.Component{
+  constructor(props){
+    super(props);
+    this.state = {
+      fontColor : '#000000',
+      backColor : '#000000'
+    }
+
+    this.colorF = this.colorF.bind(this);
+    this.backCo = this.backCo.bind(this);
+  }
+  colorF(e){
+     this.setState({
+      fontColor : e.target.attributes[0].nodeValue
+    }, () => (document.execCommand('foreColor', false, this.state.fontColor)))
+  }
+  backCo(e){
+     this.setState({
+      backColor : e.target.attributes[0].nodeValue
+    }, () => (document.execCommand('BackColor', false, this.state.backColor)))
+  }
+  render(){
+    return (
     <div className="colback-container size">
       <div className="colors-container ">
-        <button className="actual-color" style={{ backgroundColor: fontColor }}>
+        <button className="actual-color" style={{ backgroundColor: this.state.fontColor }}>
           <div></div>
         </button>
         {colorProps[0].colors.map((v, i) => (
           <button
+            key={`ColorF:${v}`}
             color={v}
             className={`${colorProps[0].classname} color-${i + 1}`}
-            onClick={e => colorFont(e)}
+            onClick={e => this.colorF(e)}
           >
             <div></div>
           </button>
         ))}
       </div>
       <div className="colors-container">
-        <button className="actual-color" style={{ backgroundColor: backColor }}>
+        <button className="actual-color" style={{ backgroundColor: this.state.backColor }}>
           <div></div>
         </button>
         {backProps[0].colors.map((v, i) => (
           <button
+            key={`Backprop:${v}`}
             color={v}
             className={`${backProps[0].classname} color-${i + 11}`}
-            onClick={e => backFont(e)}
+            onClick={e => this.backCo(e)}
           >
             <div></div>
           </button>
@@ -78,5 +91,5 @@ const Colors = ({}) => {
       </div>
     </div>
   )
+  }
 }
-export default Colors

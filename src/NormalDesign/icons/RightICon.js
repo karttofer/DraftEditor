@@ -1,7 +1,8 @@
 import React from 'react'
-const RightICon = () => {
-  return (
-    <svg
+export default class RightICon extends React.PureComponent{
+  render(){
+      return(
+         <svg
       className="right-svg default"
       xmlns="http://www.w3.org/2000/svg"
       width="24"
@@ -11,6 +12,7 @@ const RightICon = () => {
       <path d="M3 21h18v-2H3v2zm6-4h12v-2H9v2zm-6-4h18v-2H3v2zm6-4h12V7H9v2zM3 3v2h18V3H3z" />
       <path d="M0 0h24v24H0z" fill="none" />
     </svg>
-  )
+
+      )
+  }
 }
-export default RightICon

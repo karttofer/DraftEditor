@@ -1,12 +1,3 @@
-/*
-	This code it's importar because here we can see what I'm doing to change the text:
-	I used execCommand to get controll the text.
-
-	Problem: When you will make a link, the getSelection quite the last selection (at this case was
-	the text that you selected) buy why this happend? I implemented a system that allows you write
-	you link without alert ()
-
-*/
 import React from 'react'
 import FirstLinePresentation from './FirstLinePresentation'
 import './style.css'

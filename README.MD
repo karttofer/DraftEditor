@@ -22,6 +22,7 @@ class App extends Component {
   }
 }
 ```
+
 ## How was created 😗?
 Well, I'm react developer (I love it 💖) besides this projects it's just JSX and CSS.
 

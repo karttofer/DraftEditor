@@ -88,7 +88,7 @@ lerna-debug.log
 .DS_Store
 Thumbs.db
 # Cache, Netlify, dist, public
-cache/
+.cache/
 dist/
 netlify/
 public/

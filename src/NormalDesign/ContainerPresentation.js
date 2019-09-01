@@ -3,7 +3,6 @@ import FirstLine from './TextAlignLinkRestoneAlign/FirstLineLogic'
 import SecondLine from './BoldItalicAndOther/SecondLineLogic'
 import ThirdLine from './Size/SizeLogic'
 import FourthLine from './ColorBackground/ColorsContainer'
-
 export default class Container extends React.Component{
   render(){
      return(

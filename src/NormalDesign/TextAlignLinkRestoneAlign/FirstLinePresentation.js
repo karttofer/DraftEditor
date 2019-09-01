@@ -1,5 +1,5 @@
 import React from 'react'
-import LeftICon from '../icons/LeftICon'
+import LeftICon from '../icons/LeftIcon'
 import RightICon from '../icons/RightICon'
 import CenterIcon from '../icons/CenterIcon'
 import FormatClean from '../icons/FormatCleanIcon'

@@ -1,12 +1,15 @@
 import React from 'react'
 import ContainerPresentation from './ContainerPresentation'
 export default class ContainerLogic extends React.PureComponent {
-  state = {
-    appear: false,
-    x: 0,
-    y: 0,
-  }
-  componentDidMount = () => {
+    constructor(props){
+      super(props);
+      this.state = {
+          appear: false,
+          x: 0,
+          y: 0,
+        }
+    }
+   componentDidMount(){ 
     setInterval(() => {
       if (document.getSelection().toString() && this.state.appear == false) {
         this.setState({

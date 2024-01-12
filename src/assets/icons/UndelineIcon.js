@@ -3,9 +3,9 @@ export default class UndelineICon extends React.PureComponent {
   render() {
     return (
       <svg
+      
         className="underline-icon default"
         version="1.1"
-        id="Capa_1"
         x="0px"
         y="0px"
         width="24px"

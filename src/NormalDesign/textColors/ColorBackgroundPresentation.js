@@ -40,26 +40,26 @@ export default class Colors extends React.Component {
     super(props)
     this.state = {
       fontColor: '#000000',
-      backColor: '#000000',
+      backgroundValue: '#000000',
     }
 
-    this.colorF = this.colorF.bind(this)
-    this.backCo = this.backCo.bind(this)
+    this.colorHandler = this.colorHandler.bind(this)
+    this.backgroundHandler = this.backgroundHandler.bind(this)
   }
-  colorF(e) {
+  colorHandler(event) {
     this.setState(
       {
-        fontColor: e.target.attributes[0].nodeValue,
+        fontColor: event.target.attributes.color.value,
       },
       () => document.execCommand('foreColor', false, this.state.fontColor)
     )
   }
-  backCo(e) {
+  backgroundHandler(event) {
     this.setState(
       {
-        backColor: e.target.attributes[0].nodeValue,
+        backgroundValuelor: event.target.attributes.color.value,
       },
-      () => document.execCommand('BackColor', false, this.state.backColor)
+      () => document.execCommand('BackColor', false, this.state.backgroundValue)
     )
   }
   render() {
@@ -72,12 +72,13 @@ export default class Colors extends React.Component {
           >
             <div></div>
           </button>
-          {colorProps[0].colors.map((v, i) => (
+          {colorProps[0].colors.map((value, index) => (
             <button
-              key={`ColorF:${v}`}
-              color={v}
-              className={`${colorProps[0].classname} color-${i + 1}`}
-              onClick={e => this.colorF(e)}
+            
+              key={`colorValue:${value}`}
+              color={value}
+              className={`${colorProps[0].classname} color-${index + 1}`}
+              onClick={event => this.colorHandler(event)}
             >
               <div></div>
             </button>
@@ -86,16 +87,17 @@ export default class Colors extends React.Component {
         <div className="colors-container">
           <button
             className="actual-color"
-            style={{ backgroundColor: this.state.backColor }}
+            style={{ backgroundColor: this.state.backgroundValuelor }}
           >
             <div></div>
           </button>
           {backProps[0].colors.map((v, i) => (
             <button
-              key={`Backprop:${v}`}
+            
+              key={`backgroundValue:${v}`}
               color={v}
               className={`${backProps[0].classname} color-${i + 11}`}
-              onClick={e => this.backCo(e)}
+              onClick={e => this.backgroundHandler(e)}
             >
               <div></div>
             </button>

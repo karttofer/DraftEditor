@@ -3,9 +3,9 @@ export default class LinkIcon extends React.PureComponent {
   render() {
     return (
       <svg
+      
         className="link-svg default"
         height="25px"
-        id="Capa_1"
         version="1.1"
         viewBox="0 0 80 80"
         width="24px"

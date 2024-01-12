@@ -3,6 +3,7 @@ export default class BoldIcon extends React.PureComponent {
   render() {
     return (
       <svg
+      
         className="bold-svg default"
         xmlns="http://www.w3.org/2000/svg"
         width="24"

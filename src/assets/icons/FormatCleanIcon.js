@@ -3,6 +3,7 @@ export default class FormatClean extends React.PureComponent {
   render() {
     return (
       <svg
+      
         className="cleanf-svg default"
         xmlns="http://www.w3.org/2000/svg"
         width="24"

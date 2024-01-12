@@ -1,38 +1,46 @@
+// dependencies
 import React from 'react'
+
+// components
 import ContainerPresentation from './ContainerPresentation'
+
 export default class ContainerLogic extends React.PureComponent {
   constructor(props) {
     super(props)
     this.state = {
-      appear: false,
+      show: false,
       x: 0,
       y: 0,
     }
   }
   componentDidMount() {
-    setInterval(() => {
-      if (document.getSelection().toString() && this.state.appear == false) {
+    document.onselectionchange = () => {
+      document.onmouseup = () => {
         this.setState({
-          appear: !this.state.appear,
+          show: document.getSelection().toString(),
         })
+        return
       }
-    }, 100)
-    document.body.addEventListener('mousemove', e => {
-      return this.state.appear
-        ? null
-        : this.setState({ x: e.pageX, y: e.pageY })
-    })
-    document.body.addEventListener('click', a => {
-      let getId = a.path.map(val => val.id)
-      return !getId.includes('invalid')
-        ? this.setState({ appear: false })
-        : false
-    })
+
+      document.onmousemove = (event) => {
+        const {pageX, pageY} = event
+  
+        return !this.state.show
+          ? this.setState({ x: pageX, y: pageY })
+          : false
+      }
+  
+      this.setState({
+        show: false,
+      })
+    };
+
+ 
   }
   render() {
     return (
       <ContainerPresentation
-        appear={this.state.appear}
+      show={this.state.show}
         x={
           this.state.x > window.innerWidth / 2
             ? this.state.x - 230

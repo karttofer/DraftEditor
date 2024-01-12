@@ -1,9 +1,9 @@
 import React from 'react'
-import LeftICon from '../icons/LeftIcon'
-import RightICon from '../icons/RightICon'
-import CenterIcon from '../icons/CenterIcon'
-import FormatClean from '../icons/FormatCleanIcon'
-import LinkIcon from '../icons/LinkIcon'
+import LeftICon from '../../assets/icons/LeftIcon'
+import RightICon from '../../assets/icons/RightICon'
+import CenterIcon from '../../assets/icons/CenterIcon'
+import FormatClean from '../../assets/icons/FormatCleanIcon'
+import LinkIcon from '../../assets/icons/LinkIcon'
 export default class AlignOptions extends React.Component {
   render() {
     return (

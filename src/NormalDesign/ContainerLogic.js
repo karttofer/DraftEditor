@@ -22,25 +22,21 @@ export default class ContainerLogic extends React.PureComponent {
         return
       }
 
-      document.onmousemove = (event) => {
-        const {pageX, pageY} = event
-  
-        return !this.state.show
-          ? this.setState({ x: pageX, y: pageY })
-          : false
+      document.onmousemove = event => {
+        const { pageX, pageY } = event
+
+        return !this.state.show ? this.setState({ x: pageX, y: pageY }) : false
       }
-  
+
       this.setState({
         show: false,
       })
-    };
-
- 
+    }
   }
   render() {
     return (
       <ContainerPresentation
-      show={this.state.show}
+        show={this.state.show}
         x={
           this.state.x > window.innerWidth / 2
             ? this.state.x - 230

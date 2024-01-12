@@ -15,9 +15,8 @@ export default class Container extends React.Component {
           left: `${this.props.x}px`,
           top: `${this.props.y}px`,
         }}
-        
       >
-        <FirstLine/>
+        <FirstLine />
         <SecondLine />
         <ThirdLine />
         <FourthLine />

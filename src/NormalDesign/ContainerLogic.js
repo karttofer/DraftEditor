@@ -1,7 +1,4 @@
-// dependencies
 import React from 'react'
-
-// components
 import ContainerPresentation from './ContainerPresentation'
 
 export default class ContainerLogic extends React.PureComponent {
